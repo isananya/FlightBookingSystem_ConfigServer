@@ -11,12 +11,12 @@ spring:
         - id: booking-service
           uri: lb://booking-service
           predicates:
-            - Path=/booking/**
+            - Path=/booking/**, /ticket/**
 
         - id: flight-service
           uri: lb://flight-service
           predicates:
-            - Path=/flight/**
+            - Path=/flight/**, /airline/**, /search/**
 
       discovery:
         locator:
