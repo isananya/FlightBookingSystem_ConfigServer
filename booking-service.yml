@@ -46,9 +46,14 @@ resilience4j:
         wait-duration-in-open-state: 10s
         permitted-number-of-calls-in-half-open-state: 3
 
+
 app:
   queue:
-    booking: booking_queue
+    booking: booking.queue
+    exchange: booking.exchange
+    routing:
+      created: booking.created
+      cancelled: booking.cancelled
 
 management:
   endpoints:

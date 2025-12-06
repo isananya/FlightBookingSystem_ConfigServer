@@ -30,7 +30,3 @@ eureka:
 app:
   queue:
     booking: booking.queue
-    exchange: booking.exchange
-    routing:
-      created: booking.created
-      cancelled: booking.cancelled
