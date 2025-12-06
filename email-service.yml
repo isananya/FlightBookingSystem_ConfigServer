@@ -30,3 +30,8 @@ eureka:
 app:
   queue:
     booking: booking.queue
+
+logging:
+  level:
+    org.springframework.mail: DEBUG
+    org.springframework.amqp: DEBUG
