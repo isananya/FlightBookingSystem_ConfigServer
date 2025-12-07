@@ -27,3 +27,9 @@ eureka:
 jwt:
   secret: 5367566B59703373367639792F423F4528482B4D6251655468576D5A71347437  # 256-bit Hex
   expiration: 7200000  # 2 hours
+  
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
