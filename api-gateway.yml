@@ -21,7 +21,7 @@ spring:
         - id: flight-admin
           uri: lb://flight-service
           predicates:
-            - Path=/schedule/**
+            - Path=/schedule/route, /schedule/inventory
           filters:
             - StripPrefix=1
             - JwtAuthFilter=ROLE_ADMIN
