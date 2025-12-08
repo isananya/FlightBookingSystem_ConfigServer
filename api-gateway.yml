@@ -15,15 +15,13 @@ spring:
           uri: lb://user-service
           predicates:
             - Path=/auth/**
-          filters:
-            - StripPrefix=1
+
 
         - id: flight-public
           uri: lb://flight-service
           predicates:
             - Path=/flights/**
           filters:
-            - StripPrefix=1
             - name: JwtAuthFilter
 
         - id: flight-admin
@@ -31,7 +29,6 @@ spring:
           predicates:
             - Path=/schedule/**
           filters:
-            - StripPrefix=1
             - name: JwtAuthFilter
               args:
                 requiredRole: ROLE_ADMIN
@@ -41,7 +38,6 @@ spring:
           predicates:
             - Path=/booking/**, /ticket/**
           filters:
-            - StripPrefix=1
             - name: JwtAuthFilter
 
 jwt:
